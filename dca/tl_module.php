@@ -79,7 +79,7 @@ class tl_module_modulealias extends Backend
 		
 		while( $objModules->next() )
 		{
-			$arrModules[$objModules->theme][$objModules->id] = $objModules->name;
+			$arrModules[$objModules->id] = $objModules->name;
 		}
 		
 		return $arrModules;

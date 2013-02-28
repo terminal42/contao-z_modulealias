@@ -52,7 +52,7 @@ class ModuleAlias extends Module
 		{
 			global $objPage;
 
-			$objModules = $this->Database->execute("SELECT id, aliasPages FROM tl_module WHERE id IN (" . implode(',', $arrModules) . ")");
+			$objModules = $this->Database->execute("SELECT id, aliasPages FROM tl_module WHERE id IN (" . implode(',', $arrModules) . ") ORDER BY " . $this->Database->findInSet('id', $arrModules));
 
 			while( $objModules->next() )
 			{

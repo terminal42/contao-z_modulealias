@@ -1,4 +1,4 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
  * Contao Open Source CMS
@@ -55,7 +55,8 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['aliasPages'] = array
 	'label'				=> &$GLOBALS['TL_LANG']['tl_module']['aliasPages'],
 	'exclude'			=> true,
 	'inputType'			=> 'pageTree',
-	'eval'				=> array('fieldType'=>'checkbox'),
+	'eval'				=> array('fieldType'=>'checkbox', 'multiple'=>true),
+	'sql'               => "blob NULL"
 );
 
 $GLOBALS['TL_DCA']['tl_module']['fields']['aliasModules'] = array
@@ -65,6 +66,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['aliasModules'] = array
 	'inputType'			=> 'checkboxWizard',
 	'options_callback'	=> array('tl_module_modulealias', 'getModules'),
 	'eval'				=> array('mandatory'=>true, 'multiple'=>true),
+	'sql'               => "blob NULL"
 );
 
 

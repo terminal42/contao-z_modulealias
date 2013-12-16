@@ -32,6 +32,6 @@
  */
 ClassLoader::addClasses(array
 (
-	'ModuleAlias'         => 'system/modules/z_modulealias/ModuleAlias.php',
+	'Contao\ModuleAlias'         => 'system/modules/z_modulealias/ModuleAlias.php',
 ));
 

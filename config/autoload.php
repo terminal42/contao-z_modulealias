@@ -11,7 +11,9 @@
 
 
 /**
- * Frontend modules
+ * Register the classes
  */
-$GLOBALS['FE_MOD']['miscellaneous']['modulealias']	= 'Terminal42\ModuleAliasExtension\ModuleAlias';
-
+ClassLoader::addClasses(array
+(
+	'Terminal42\ModuleAliasExtension\ModuleAlias' => 'system/modules/z_modulealias/ModuleAlias.php',
+));
